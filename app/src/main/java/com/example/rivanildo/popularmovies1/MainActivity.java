@@ -40,9 +40,9 @@ public class MainActivity extends AppCompatActivity {
             startActivity(new Intent(this, SettingsActivity.class));
             return true;
         }
-
+    //ok
         return super.onOptionsItemSelected(item);
     }
 
-    
+
 }
