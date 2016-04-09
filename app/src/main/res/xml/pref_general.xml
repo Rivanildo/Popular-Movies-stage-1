@@ -1,0 +1,13 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <ListPreference
+        android:title="Tipo de exibição"
+        android:key="tipo"
+        android:defaultValue="Popular"
+        android:entryValues="@array/pref_values"
+        android:entries="@array/pref_options" />
+
+</PreferenceScreen>

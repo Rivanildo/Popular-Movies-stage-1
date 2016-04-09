@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="pref_options">
+        <item>@string/popular_lable</item>
+        <item>@string/mais_avaliados_lable</item>
+    </string-array>
+
+    <string-array name="pref_values">
+        <item>@string/popular</item>
+        <item>@string/mais_avaliados</item>
+    </string-array>
+
+</resources>

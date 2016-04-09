@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Popular Movies 1</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_settings">Settings</string>
+
+
+    <string name="popular" translatable="false">Popular</string>
+    <string name="mais_avaliados" translatable="false">Top Rated</string>
+    <string name="popular_lable" translatable="false">Popular</string>
+    <string name="mais_avaliados_lable" translatable="false">Top Rated</string>
+
+
+</resources>
