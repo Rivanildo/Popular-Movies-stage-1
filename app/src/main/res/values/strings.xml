@@ -8,6 +8,8 @@
     <string name="mais_avaliados" translatable="false">Top Rated</string>
     <string name="popular_lable" translatable="false">Popular</string>
     <string name="mais_avaliados_lable" translatable="false">Top Rated</string>
+    <string name="title_activity_detail">DetailActivity</string>
+    <string name="desc_movie_poster">Movie poster</string>
 
 
 </resources>
