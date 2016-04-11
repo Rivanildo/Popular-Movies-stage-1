@@ -7,4 +7,5 @@
     <dimen name="grid_item_margin">4dp</dimen>
     <dimen name="view_vertical_margin">8dp</dimen>
     <dimen name="view_horizontal_margin">8dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
 </resources>
