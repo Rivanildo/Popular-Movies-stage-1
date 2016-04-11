@@ -1,5 +1,6 @@
 package com.example.rivanildo.popularmovies1;
 
+import android.content.Context;
 import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.AsyncTask;
@@ -34,6 +35,9 @@ public class FetchMovieList extends AsyncTask<String, Void, List<Movie>> {
         super.onPreExecute();
     }
 
+    // Problemas para recuperar aqui
+    //SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(getActivity());
+    //String type = sp.getString(SettingsActivity);
 
     @Override
 
@@ -46,7 +50,7 @@ public class FetchMovieList extends AsyncTask<String, Void, List<Movie>> {
         try {
             //URL url = new URL("https://api.themoviedb.org/3/movie/popular?api_key=edc70511df1429e113d63565041dbd15");
 
-            Uri.Builder builder = createMovieListFetchURI(type);
+            Uri.Builder builder = createMovieListFetchURI(type); // Lembrar aqui
             URL url = new URL(builder.build().toString());
 
             urlConnection = (HttpURLConnection) url.openConnection();
@@ -128,6 +132,11 @@ public class FetchMovieList extends AsyncTask<String, Void, List<Movie>> {
         Log.v(LOG_TAG, "Uri movie list fetch: "+builder.toString());
 
         return builder;
+    }
+
+
+    public Context getActivity() {
+        return getActivity();
     }
 }
 
