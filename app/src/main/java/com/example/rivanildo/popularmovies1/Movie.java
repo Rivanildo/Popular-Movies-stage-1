@@ -8,20 +8,19 @@ public class Movie {
     private String sinopse;
     private String dataRelease;
     private String tituloOriginal;
-    private String idioma;
-    private String titulo;
+    private String avaliacao;
 
-    public Movie(String linkImg, String sinopse, String dataRelease, String tituloOriginal, String idioma, String titulo) {
+    public Movie(String linkImg, String sinopse, String dataRelease, String tituloOriginal, String avaliacao) {
         this.linkImg = linkImg;
         this.sinopse = sinopse;
         this.dataRelease = dataRelease;
         this.tituloOriginal = tituloOriginal;
-        this.idioma = idioma;
-        this.titulo = titulo;
+        this.avaliacao = avaliacao;
+
     }
 
     public String toString() {
-        return "Link: " + linkImg + " - Data: " + dataRelease + " Titulo Original: " + tituloOriginal + " Idioma: " + idioma + " Título: " + titulo + " Sinopse: " + sinopse;
+        return "Link: " + linkImg + " - Data: " + dataRelease + " Titulo Original: " + tituloOriginal + " avaliacao: " + avaliacao  + " Sinopse: " + sinopse;
     }
 
     public String getLinkImg() {
@@ -40,12 +39,8 @@ public class Movie {
         return tituloOriginal;
     }
 
-    public String getTitulo() {
-        return titulo;
-    }
-
-    public String getIdioma() {
-        return idioma;
+    public String getAvaliacao() {
+        return avaliacao;
     }
 
 }

@@ -50,7 +50,7 @@ public class FetchMovieList extends AsyncTask<String, Void, List<Movie>> {
         try {
             //URL url = new URL("https://api.themoviedb.org/3/movie/popular?api_key=edc70511df1429e113d63565041dbd15");
 
-            Uri.Builder builder = createMovieListFetchURI(type); // Lembrar aqui
+            Uri.Builder builder = createMovieListFetchURI("popular"); // Lembrar aqui
             URL url = new URL(builder.build().toString());
 
             urlConnection = (HttpURLConnection) url.openConnection();
@@ -112,7 +112,7 @@ public class FetchMovieList extends AsyncTask<String, Void, List<Movie>> {
         Movie movie;
         for (int i = 0; i < jsonArray.length(); i++) {
             JSONObject f = jsonArray.getJSONObject(i);
-            movie = new Movie("http://image.tmdb.org/t/p/w185" + f.getString("poster_path"), f.getString("overview"), f.getString("release_date"), f.getString("original_title"), f.getString("original_language"), f.getString("title"));
+            movie = new Movie("http://image.tmdb.org/t/p/w185" + f.getString("poster_path"), f.getString("overview"), f.getString("release_date"), f.getString("original_title"), f.getString("vote_average"));
             listMovie.add(movie);
             // Log.e("lol", filme.toString());
         }

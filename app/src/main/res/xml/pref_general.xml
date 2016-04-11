@@ -4,7 +4,7 @@
 
 
     <ListPreference
-        android:title="Tipo de exibição"
+        android:title="Tipo de exibição "
         android:key="TYPE_PREFERENCE"
         android:defaultValue="@string/pref_type_default"
         android:entryValues="@array/pref_values"
