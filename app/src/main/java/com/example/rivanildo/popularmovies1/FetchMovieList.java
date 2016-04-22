@@ -4,8 +4,11 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.AsyncTask;
+import android.preference.ListPreference;
+import android.preference.PreferenceActivity;
 import android.preference.PreferenceManager;
 import android.util.Log;
+import android.view.View;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -30,14 +33,17 @@ public class FetchMovieList extends AsyncTask<String, Void, List<Movie>> {
     private static final String API_KEY = "edc70511df1429e113d63565041dbd15" ;
     private final String LOG_TAG = FetchMovieList.class.getSimpleName();
 
+    public String preferences;
+
     @Override
     protected void onPreExecute() {
         super.onPreExecute();
     }
 
-    // Problemas para recuperar aqui
-    //SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(getActivity());
-    //String type = sp.getString(SettingsActivity);
+    public FetchMovieList(String n) {
+        preferences = n;
+    }
+    
 
     @Override
 
@@ -50,7 +56,7 @@ public class FetchMovieList extends AsyncTask<String, Void, List<Movie>> {
         try {
             //URL url = new URL("https://api.themoviedb.org/3/movie/popular?api_key=edc70511df1429e113d63565041dbd15");
 
-            Uri.Builder builder = createMovieListFetchURI("popular"); // Lembrar aqui
+            Uri.Builder builder = createMovieListFetchURI(preferences); // Lembrar aqui
             URL url = new URL(builder.build().toString());
 
             urlConnection = (HttpURLConnection) url.openConnection();
@@ -119,14 +125,14 @@ public class FetchMovieList extends AsyncTask<String, Void, List<Movie>> {
         return listMovie;
     }
 
-    private Uri.Builder createMovieListFetchURI(String tipe){
+    private Uri.Builder createMovieListFetchURI(String type){
         //http://api.themoviedb.org/3/movie/top_rated?api_key=aaaaaapppppiiiiiikeeeeeyy
         Uri.Builder builder = new Uri.Builder();
         builder.scheme("http")
                 .authority("api.themoviedb.org")
                 .appendPath("3")
                 .appendPath("movie")
-                .appendPath(tipe)
+                .appendPath(type)
                 .appendQueryParameter("api_key", API_KEY);
 
         Log.v(LOG_TAG, "Uri movie list fetch: "+builder.toString());
@@ -135,8 +141,7 @@ public class FetchMovieList extends AsyncTask<String, Void, List<Movie>> {
     }
 
 
-    public Context getActivity() {
-        return getActivity();
-    }
+
 }
+
 

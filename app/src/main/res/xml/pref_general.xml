@@ -5,9 +5,11 @@
 
     <ListPreference
         android:title="Tipo de exibição "
-        android:key="TYPE_PREFERENCE"
+        android:key="@string/pref_category_key"
         android:defaultValue="@string/pref_type_default"
         android:entryValues="@array/pref_values"
         android:entries="@array/pref_options" />
+
+
 
 </PreferenceScreen>

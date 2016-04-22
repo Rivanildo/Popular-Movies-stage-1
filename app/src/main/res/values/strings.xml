@@ -3,11 +3,11 @@
     <string name="action_settings">Settings</string>
     <string name="title_activity_settings">Settings</string>
 
-
+    <string name="pref_category_key" translatable="false">key</string>
     <string name="popular" translatable="false">popular</string>
     <string name="top_rated" translatable="false">top_rated</string>
-    <string name="popular_lable" translatable="false">Popular</string>
-    <string name="mais_avaliados_lable" translatable="false">Top Rated</string>
+    <string name="popular_lable" translatable="false">popular</string>
+    <string name="mais_avaliados_lable" translatable="false">top_rated</string>
     <string name="title_activity_detail">DetailActivity</string>
     <string name="desc_movie_poster">Movie poster</string>
     <string name="pref_type_default" translatable="false">popular</string>
